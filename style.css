@@ -1,0 +1,262 @@
+header {
+    height: 90vh;
+    background-image: url('images/header.jpg');
+    background-size: cover;
+}
+
+.header-logo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.header-separator {
+    background-color: darkgrey;
+    height: 1px;
+    width: 100%;
+}
+
+.header-title {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 15%;
+    margin-bottom: 1%;
+
+}
+
+.nav-item> a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav > li:hover{
+    background-color: #f16041;
+    transition: 0.5s;
+    color: cornsilk;
+}
+
+.separator {
+    background-color: #f16041;
+    height: 3px;
+    width: 2%;
+    margin: 0 auto;
+}
+
+.header-text {
+    color: gray;
+    text-align: center;
+    font-size: 25px;
+    margin: 25px 10%;
+}
+
+.btn {
+    border-radius: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bg-orange {
+    background-color: #f16041;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.clr-orange {
+    color: orange;
+}
+
+.clr-white {
+    color: white;
+}
+
+.clr-black {
+    color: black;
+}
+
+.start-section {
+    background-color: #f16041;
+    height: 40vh;
+}
+
+.section-title {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 25px;
+}
+
+.section-text {
+    color: rgb(243, 242, 242);
+    text-align: center;
+    margin: 25px 0;
+}
+
+.separator {
+    background-color: rgb(245, 244, 244);
+    height: 2px;
+    width: 5%;
+    margin: 0 auto;
+}
+
+.services-section {
+    height: 50vh;
+}
+
+.gray {
+    color: gray;
+}
+
+.service-card {
+    height: 100%;
+}
+
+.service-card-title {
+    color: black;
+    margin: 3% 0%;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.service-card > svg {
+    fill: #f16041;
+    height: 30%;
+    width: 30%;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-img-block {
+    position: relative;
+}
+
+
+.grid-img-block> img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-img-mask {
+    width: 100%;
+    height: 100%;
+    background-color: #f161419f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: grid-img-hover-revert 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-img-block:hover > .grid-img-mask {
+    animation: grid-img-hover 0.5s ease-in;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mask-title {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(211, 211, 211);
+}
+
+.mask-text {
+    text-transform: capitalize;
+    font-size: 25px;
+    color: white;
+}
+
+
+@keyframes grid-img-hover {
+    from {
+        opacity: 0;
+     }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes grid-img-hover-revert {
+    from {
+        opacity: 1;
+     }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.download {
+    background-color:#222222;
+    height: 30vh;
+}
+
+.footer {
+    height: auto;
+}
+
+.footer-card {
+    /* height: 50%; */
+}
+
+.footer-card > svg {
+    height: 30%;
+    width: 30%;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.chb {
+    display: none;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+
+.btn1:checked ~ .menu {
+    display: flex;
+    transition: 0.5s ease-in-out;
+    transform: translate(-10% -10%);
+}
